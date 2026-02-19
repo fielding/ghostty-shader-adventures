@@ -32,12 +32,6 @@ Soft animated clouds drifting behind terminal text. Three cloud layers at differ
 
 Probably the most subtle/daily-driver-friendly shader in the collection.
 
-### flame.glsl
-
-**Work in progress.** Cursor-localized 3D raymarched fire inspired by [iq's flame shader](https://www.shadertoy.com/view/MdX3zr). A volumetric flame rises from the cursor, stoked by typing activity.
-
-Features: 3D FBM noise volume, cursor-following, typing heat reactivity, flame lean on cursor movement. Still needs work on the density/shape — currently looks more like a candy corn than fire. The coordinate system (Ghostty's y-axis points down) has been a source of bugs. Needs more iteration on the noise carving to get proper ragged fire edges.
-
 ### jam.glsl
 
 Three-mode electric arc system with particle effects, controlled via cursor color. Designed for a workflow where external scripts set the cursor color to shift intensity:
