@@ -124,11 +124,3 @@ Ghostty custom shaders are fragment shaders implementing `void mainImage(out vec
 - No external texture inputs — replace texture-based noise with procedural noise functions
 
 See the [Ghostty docs](https://ghostty.org/docs/config/reference#custom-shader) for the full config reference.
-
-## Current state
-
-- **Active daily driver:** `clouds.glsl` (pointed to from Ghostty config)
-- **Polished:** `splatter.glsl`, `clouds.glsl`, `jam.glsl`
-- **WIP:** `flame.glsl` (needs shape/direction fixes)
-- **Experimental:** `fxaa.glsl` (local only, not committed)
-- **Todo:** Star Nest (cosmic nebula), sci-fi HUD overlay, bloom post-processing pass
