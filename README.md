@@ -32,6 +32,25 @@ Soft animated clouds drifting behind terminal text. Three cloud layers at differ
 
 Probably the most subtle/daily-driver-friendly shader in the collection.
 
+### hexglitch.glsl
+
+Hexagonal interference pattern with CRT glitch effects. Ported from [Shadertoy lfscD7](https://www.shadertoy.com/view/lfscD7). Hexagonal tiling with ripple interference creates morphing Moiré patterns that rotate and shift between states. CRT-style glitch displacement adds digital chaos.
+
+**Features:**
+- Hexagonal tiling with barycentric coordinate math and sub-hex subdivision
+- Ripple interference from 35 wave sources creating evolving Moiré patterns
+- 2-level fractal zoom — each iteration rotates and scales deeper into the pattern
+- CRT glitch effects: scanline jitter, vertical band jumps, horizontal band tears
+- JPEG-style color posterization on displaced regions
+- Chromatic aberration, vignette, HSV color grading
+- Human++ palette colors bleed through during phase transitions
+
+**Interactive features:**
+- Hex pattern brightens near cursor when typing
+- Subtle colored glow at cursor position
+
+**Note:** The original Shadertoy used a multi-pass bloom (Buffer B + Image pass) that gave bright edges a hot glow. That effect was dropped in the single-pass port but could be approximated with a stacked bloom shader.
+
 ### jam.glsl
 
 Three-mode electric arc system with particle effects, controlled via cursor color. Designed for a workflow where external scripts set the cursor color to shift intensity:
@@ -47,6 +66,24 @@ Features: electric arcs with FBM noise paths, branching bolts, particle sparks, 
 ### jam_electric_v2.glsl
 
 Earlier iteration of the electric arc shader. Single-mode (no cursor color control), always reactive to typing speed. Snappier response, thicker bolts, more aggressive screen shake. A good pick if you want the electric effect without the multi-mode complexity.
+
+### cursor-glitch.glsl
+
+Stackable cursor-localized digital interference. Designed to be stacked on top of any base shader — when idle, passes through with zero visual cost.
+
+**Features:**
+- Horizontal scanline tears that shift sideways near the cursor
+- 8px block displacement (vertical jumps)
+- RGB chromatic aberration (red/blue channel split)
+- Sparse digital static (bright/dark pixel noise)
+- All effects scale with cursor proximity and typing activity
+- Fades to pure passthrough when idle
+
+**Usage (stack after any base shader):**
+```
+custom-shader = /path/to/splatter.glsl
+custom-shader = /path/to/cursor-glitch.glsl
+```
 
 ### fxaa.glsl
 
