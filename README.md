@@ -6,16 +6,41 @@ All shaders use colors from the [Human++](https://github.com/fielding/human-plus
 
 ## Shaders
 
-| Shader | Type | Description |
-|--------|------|-------------|
-| **[splatter](shaders/splatter.glsl)** | background | Fractal paint splatters, cursor paintbrush |
-| **[clouds](shaders/clouds.glsl)** | background | Parallax FBM clouds |
-| **[hexglitch](shaders/hexglitch.glsl)** | background | Hex Moire interference + CRT glitch |
-| **[electric](shaders/electric.glsl)** | background | Typing-reactive electric arcs (set and enjoy) |
-| **[electric-modes](shaders/electric-modes.glsl)** | background | Three-mode electric arcs via cursor color |
-| **[cursor-glitch](shaders/cursor-glitch.glsl)** | stackable | Cursor-localized digital interference |
+### splatter
+
+Fractal paint splatters, cursor paintbrush.
+
+![splatter](.github/assets/splatter.gif)
 
 > See also [`splatter-original.glsl`](shaders/splatter-original.glsl) for a static non-interactive version.
+
+### clouds
+
+Parallax FBM clouds.
+
+![clouds](.github/assets/clouds.gif)
+
+### hexglitch
+
+Hex Moire interference + CRT glitch.
+
+![hexglitch](.github/assets/hexglitch.gif)
+
+### electric
+
+Typing-reactive electric arcs (set and enjoy).
+
+![electric](.github/assets/electric.gif)
+
+### electric-modes
+
+Three-mode electric arcs via cursor color.
+
+![electric-modes](.github/assets/electric-modes.gif)
+
+### cursor-glitch
+
+Cursor-localized digital interference. **Stackable** — layer on any base shader, zero cost when idle.
 
 ## Usage
 
