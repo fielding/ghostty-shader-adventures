@@ -1,2 +1,3 @@
-flame.glsl
-fxaa.glsl
+shaders/flame.glsl
+shaders/fxaa.glsl
+demos/
